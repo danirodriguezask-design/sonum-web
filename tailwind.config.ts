@@ -12,16 +12,16 @@ const config: Config = {
         sonum: {
           black: '#000000',
           white: '#FFFFFF',
-          magenta: '#E91E8C',
-          purple: '#7B2FBE',
-          pink: '#FF006E',
+          magenta: '#FFFFFF',
+          purple: '#FFFFFF',
+          pink: '#FFFFFF',
           gray: '#111111',
           muted: '#333333',
         },
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'sans-serif'],
-        display: ['var(--font-bebas)', 'sans-serif'],
+        display: ['var(--font-archivo)', 'sans-serif'],
       },
       animation: {
         'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
