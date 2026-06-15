@@ -40,7 +40,7 @@ export default function Countdown({ targetDate }: Props) {
             <span className="countdown-label">{u.label}</span>
           </div>
           {i < units.length - 1 && (
-            <span className="countdown-number text-[#E91E8C] pb-4">:</span>
+            <span className="countdown-number text-[#FFFFFF] pb-4">:</span>
           )}
         </div>
       ))}
