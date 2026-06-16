@@ -31,7 +31,7 @@ export default async function SuccessPage({ searchParams }: Props) {
               <Clock size={36} className="text-yellow-500" />
             </div>
           ) : (
-            <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#E91E8C] to-[#7B2FBE] flex items-center justify-center">
+            <div className="w-20 h-20 rounded-full bg-white text-black flex items-center justify-center">
               <CheckCircle size={36} />
             </div>
           )}
@@ -63,7 +63,7 @@ export default async function SuccessPage({ searchParams }: Props) {
         {/* Email notice */}
         {!isPending && !isMesa && (
           <div className="flex items-center gap-3 bg-white/[0.03] border border-white/10 rounded-lg p-4 mb-8 text-left">
-            <Mail size={20} className="text-[#E91E8C] flex-shrink-0" />
+            <Mail size={20} className="text-[#FFFFFF] flex-shrink-0" />
             <div>
               <div className="text-sm font-semibold">Revisá tu email</div>
               {order && (

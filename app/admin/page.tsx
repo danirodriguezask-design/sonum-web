@@ -107,7 +107,7 @@ export default function AdminPage() {
               value={secret}
               onChange={e => setSecret(e.target.value)}
               placeholder="Contraseña de admin"
-              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#E91E8C] transition-colors"
+              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FFFFFF] transition-colors"
             />
             <button type="submit" className="btn-primary w-full py-3">Entrar</button>
           </form>
@@ -135,9 +135,9 @@ export default function AdminPage() {
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
         {[
-          { label: 'Ventas aprobadas', value: approvedOrders.length, icon: <Ticket size={20} className="text-[#E91E8C]" /> },
-          { label: 'Total recaudado', value: `$${totalRevenue.toLocaleString('es-AR')}`, icon: <TrendingUp size={20} className="text-[#E91E8C]" /> },
-          { label: 'RR.PP. activos', value: rrppList.filter(r => r).length, icon: <Users size={20} className="text-[#E91E8C]" /> },
+          { label: 'Ventas aprobadas', value: approvedOrders.length, icon: <Ticket size={20} className="text-[#FFFFFF]" /> },
+          { label: 'Total recaudado', value: `$${totalRevenue.toLocaleString('es-AR')}`, icon: <TrendingUp size={20} className="text-[#FFFFFF]" /> },
+          { label: 'RR.PP. activos', value: rrppList.filter(r => r).length, icon: <Users size={20} className="text-[#FFFFFF]" /> },
         ].map(s => (
           <div key={s.label} className="border border-white/10 rounded-lg p-4 bg-white/[0.02]">
             <div className="flex items-center gap-2 mb-2">{s.icon}</div>
@@ -155,7 +155,7 @@ export default function AdminPage() {
             onClick={() => setTab(t)}
             className={`px-5 py-2.5 text-sm font-semibold uppercase tracking-wider transition-colors ${
               tab === t
-                ? 'text-[#E91E8C] border-b-2 border-[#E91E8C]'
+                ? 'text-[#FFFFFF] border-b-2 border-[#FFFFFF]'
                 : 'text-white/40 hover:text-white'
             }`}
           >
@@ -174,7 +174,7 @@ export default function AdminPage() {
               placeholder="Buscar por nombre, email o código..."
               value={search}
               onChange={e => setSearch(e.target.value)}
-              className="w-full bg-white/5 border border-white/10 rounded-lg pl-9 pr-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#E91E8C] transition-colors"
+              className="w-full bg-white/5 border border-white/10 rounded-lg pl-9 pr-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#FFFFFF] transition-colors"
             />
           </div>
 
@@ -190,7 +190,7 @@ export default function AdminPage() {
                     <div className="text-white/40 text-xs mt-0.5">{o.buyer_email} · {o.buyer_phone}</div>
                     <div className="text-white/40 text-xs mt-1">
                       {o.ticket_types?.events?.artist} — {o.ticket_types?.name} × {o.quantity}
-                      {o.rrpp && <span className="ml-2 text-[#E91E8C]">via {o.rrpp.name}</span>}
+                      {o.rrpp && <span className="ml-2 text-[#FFFFFF]">via {o.rrpp.name}</span>}
                     </div>
                   </div>
                   <div className="text-right flex-shrink-0">
@@ -226,27 +226,27 @@ export default function AdminPage() {
           </div>
 
           {showNewRrpp && (
-            <div className="border border-[#E91E8C]/30 rounded-lg p-6 mb-6 bg-[#E91E8C]/5 space-y-4">
-              <h3 className="font-bold text-sm uppercase tracking-wider text-[#E91E8C]">Nuevo RR.PP.</h3>
+            <div className="border border-[#FFFFFF]/30 rounded-lg p-6 mb-6 bg-[#FFFFFF]/5 space-y-4">
+              <h3 className="font-bold text-sm uppercase tracking-wider text-[#FFFFFF]">Nuevo RR.PP.</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <input
                   type="text"
                   placeholder="Nombre completo"
                   value={newRrpp.name}
                   onChange={e => setNewRrpp({ ...newRrpp, name: e.target.value })}
-                  className="bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#E91E8C]"
+                  className="bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#FFFFFF]"
                 />
                 <input
                   type="text"
                   placeholder="Código único (ej: martin-g)"
                   value={newRrpp.code}
                   onChange={e => setNewRrpp({ ...newRrpp, code: e.target.value.toLowerCase().replace(/\s+/g, '-') })}
-                  className="bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#E91E8C]"
+                  className="bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#FFFFFF]"
                 />
                 <select
                   value={newRrpp.event_id}
                   onChange={e => setNewRrpp({ ...newRrpp, event_id: e.target.value })}
-                  className="bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#E91E8C]"
+                  className="bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white focus:outline-none focus:border-[#FFFFFF]"
                 >
                   <option value="">Seleccionar evento</option>
                   {events.map(ev => (
@@ -258,7 +258,7 @@ export default function AdminPage() {
                   placeholder="Comisión %"
                   value={newRrpp.commission_pct}
                   onChange={e => setNewRrpp({ ...newRrpp, commission_pct: Number(e.target.value) })}
-                  className="bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#E91E8C]"
+                  className="bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-[#FFFFFF]"
                 />
               </div>
               <div className="flex gap-3">
@@ -286,7 +286,7 @@ export default function AdminPage() {
                       <div className="text-white/40 text-xs mt-2">
                         {rOrders.length} ventas · ${rTotal.toLocaleString('es-AR')} recaudado
                       </div>
-                      <div className="text-[#E91E8C] text-xs mt-0.5">
+                      <div className="text-[#FFFFFF] text-xs mt-0.5">
                         Comisión ({r.commission_pct}%): ${rComm.toLocaleString('es-AR')}
                       </div>
                     </div>

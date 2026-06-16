@@ -10,7 +10,7 @@ const NEXT_EVENT = {
   dateDisplay: 'Jueves 19 de Junio, 2026',
   venue: 'Club Paraguay — Av. Marcelo T. de Alvear 651',
   description: 'LOUDEN vuelve a Córdoba para sacudir la pista en una noche que no vas a olvidar.',
-  coverBg: 'from-[#1a0025] via-[#0d0010] to-black',
+  coverBg: 'from-[#161616] via-[#0a0a0a] to-black',
 }
 
 const PAST_EVENTS = [
@@ -27,21 +27,21 @@ export default function Home() {
       <section className={`relative min-h-screen flex flex-col justify-center bg-gradient-to-b ${NEXT_EVENT.coverBg} overflow-hidden`}>
         {/* Background glow */}
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#E91E8C]/10 blur-[120px]" />
-          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-[#7B2FBE]/10 blur-[100px]" />
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#FFFFFF]/10 blur-[120px]" />
+          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] rounded-full bg-[#FFFFFF]/10 blur-[100px]" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 text-center">
           {/* SONUM logo */}
           <div className="mb-6 flex justify-center">
-            <span className="text-xs font-semibold tracking-[0.4em] text-[#E91E8C] uppercase">
+            <span className="text-xs font-semibold tracking-[0.4em] text-[#FFFFFF] uppercase">
               Groove · Party · Culture
             </span>
           </div>
 
           <h1
             className="font-black uppercase text-[clamp(64px,18vw,200px)] leading-none tracking-tight"
-            style={{ fontFamily: "'Bebas Neue', 'Inter', sans-serif" }}
+            style={{ fontFamily: "'Archivo', 'Inter', sans-serif" }}
           >
             SONUM
           </h1>
@@ -90,17 +90,17 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24" id="eventos">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="text-xs font-semibold tracking-[0.3em] text-[#E91E8C] uppercase">Próxima fecha</span>
+            <span className="text-xs font-semibold tracking-[0.3em] text-[#FFFFFF] uppercase">Próxima fecha</span>
             <h2 className="text-5xl md:text-7xl font-black uppercase mt-3 mb-6">{NEXT_EVENT.artist}</h2>
             <p className="text-white/60 leading-relaxed text-lg mb-8">{NEXT_EVENT.description}</p>
 
             <div className="space-y-3 mb-8">
               <div className="flex items-center gap-3 text-white/70">
-                <Calendar size={16} className="text-[#E91E8C] flex-shrink-0" />
+                <Calendar size={16} className="text-[#FFFFFF] flex-shrink-0" />
                 <span>{NEXT_EVENT.dateDisplay}</span>
               </div>
               <div className="flex items-center gap-3 text-white/70">
-                <MapPin size={16} className="text-[#E91E8C] flex-shrink-0" />
+                <MapPin size={16} className="text-[#FFFFFF] flex-shrink-0" />
                 <span>{NEXT_EVENT.venue}</span>
               </div>
             </div>
@@ -114,8 +114,8 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4">
             {[
               { type: 'General', price: '$8.000', desc: 'Acceso general al evento', color: 'border-white/20' },
-              { type: 'VIP', price: '$15.000', desc: 'Zona VIP con mejor vista', color: 'border-[#E91E8C]/60' },
-              { type: 'Backstage', price: '$25.000', desc: 'Acceso backstage exclusivo', color: 'border-[#7B2FBE]/60' },
+              { type: 'VIP', price: '$15.000', desc: 'Zona VIP con mejor vista', color: 'border-[#FFFFFF]/60' },
+              { type: 'Backstage', price: '$25.000', desc: 'Acceso backstage exclusivo', color: 'border-[#FFFFFF]/60' },
               { type: 'Mesa', price: 'Consultar', desc: 'Mesa reservada con servicio', color: 'border-white/20' },
             ].map(t => (
               <div key={t.type} className={`ticket-card rounded-lg p-4 cursor-pointer border ${t.color} bg-white/2`}>
@@ -134,17 +134,17 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {[
               {
-                icon: <Zap size={24} className="text-[#E91E8C]" />,
+                icon: <Zap size={24} className="text-[#FFFFFF]" />,
                 title: 'Pagá con tarjeta',
                 desc: 'Comprá tus entradas online con Mercado Pago, directo y seguro.',
               },
               {
-                icon: <Shield size={24} className="text-[#E91E8C]" />,
+                icon: <Shield size={24} className="text-[#FFFFFF]" />,
                 title: 'QR único e intransferible',
                 desc: 'Cada ticket tiene un QR único. Lo recibís por mail y lo mostrás en puerta.',
               },
               {
-                icon: <Users size={24} className="text-[#E91E8C]" />,
+                icon: <Users size={24} className="text-[#FFFFFF]" />,
                 title: 'Comprá por tu RR.PP.',
                 desc: 'Si tenés un relaciones públicas, usá su link y el pago es instantáneo.',
               },
@@ -165,7 +165,7 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24" id="nosotros">
         <div className="flex items-end justify-between mb-12">
           <div>
-            <span className="text-xs font-semibold tracking-[0.3em] text-[#E91E8C] uppercase">Historia</span>
+            <span className="text-xs font-semibold tracking-[0.3em] text-[#FFFFFF] uppercase">Historia</span>
             <h2 className="text-4xl md:text-5xl font-black uppercase mt-2">Fechas anteriores</h2>
           </div>
         </div>
@@ -174,12 +174,12 @@ export default function Home() {
           {PAST_EVENTS.map((e) => (
             <div
               key={e.name}
-              className="relative aspect-square bg-white/5 border border-white/10 rounded-lg overflow-hidden flex flex-col justify-end p-4 hover:border-[#E91E8C]/40 transition-all duration-300 group"
+              className="relative aspect-square bg-white/5 border border-white/10 rounded-lg overflow-hidden flex flex-col justify-end p-4 hover:border-[#FFFFFF]/40 transition-all duration-300 group"
             >
               {/* Gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
               {/* Glow on hover */}
-              <div className="absolute inset-0 bg-[#E91E8C]/0 group-hover:bg-[#E91E8C]/5 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-[#FFFFFF]/0 group-hover:bg-[#FFFFFF]/5 transition-colors duration-300" />
 
               <div className="relative z-10">
                 <div className="font-black text-lg uppercase">{e.name}</div>
@@ -193,7 +193,7 @@ export default function Home() {
       {/* ─── CONTACT ───────────────────────────────────────────────── */}
       <section className="border-t border-white/5 py-20" id="contacto">
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <span className="text-xs font-semibold tracking-[0.3em] text-[#E91E8C] uppercase">¿Querés ser parte?</span>
+          <span className="text-xs font-semibold tracking-[0.3em] text-[#FFFFFF] uppercase">¿Querés ser parte?</span>
           <h2 className="text-4xl md:text-5xl font-black uppercase mt-3 mb-6">Trabajá con nosotros</h2>
           <p className="text-white/50 mb-10 leading-relaxed">
             Buscamos embajadoras, RR.PP. e influencers para ser parte de la familia Sonum.

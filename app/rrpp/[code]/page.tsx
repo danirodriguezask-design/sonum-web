@@ -61,9 +61,9 @@ export default async function RrppPage({ params }: Props) {
       {/* Stats */}
       <div className="grid grid-cols-3 gap-4 mb-8">
         {[
-          { label: 'Entradas vendidas', value: approvedOrders.reduce((s: number, o: { quantity: number }) => s + o.quantity, 0), icon: <Ticket size={18} className="text-[#E91E8C]" /> },
-          { label: 'Total generado', value: `$${totalAmount.toLocaleString('es-AR')}`, icon: <TrendingUp size={18} className="text-[#E91E8C]" /> },
-          { label: `Mi comisión (${rrpp.commission_pct}%)`, value: `$${commission.toLocaleString('es-AR')}`, icon: <DollarSign size={18} className="text-[#E91E8C]" /> },
+          { label: 'Entradas vendidas', value: approvedOrders.reduce((s: number, o: { quantity: number }) => s + o.quantity, 0), icon: <Ticket size={18} className="text-[#FFFFFF]" /> },
+          { label: 'Total generado', value: `$${totalAmount.toLocaleString('es-AR')}`, icon: <TrendingUp size={18} className="text-[#FFFFFF]" /> },
+          { label: `Mi comisión (${rrpp.commission_pct}%)`, value: `$${commission.toLocaleString('es-AR')}`, icon: <DollarSign size={18} className="text-[#FFFFFF]" /> },
         ].map(s => (
           <div key={s.label} className="border border-white/10 rounded-lg p-4 bg-white/[0.02]">
             <div className="mb-2">{s.icon}</div>

@@ -84,7 +84,7 @@ export default function TicketSelector({ eventId, ticketTypes, rrppId, rrppName 
         <h2 className="text-2xl font-bold mb-6">Seleccioná tu entrada</h2>
 
         {rrppName && (
-          <div className="mb-4 p-3 border border-[#E91E8C]/30 rounded-lg bg-[#E91E8C]/5 text-sm text-[#E91E8C]">
+          <div className="mb-4 p-3 border border-[#FFFFFF]/30 rounded-lg bg-[#FFFFFF]/5 text-sm text-[#FFFFFF]">
             Comprando a través de <strong>{rrppName}</strong>
           </div>
         )}
@@ -141,7 +141,7 @@ export default function TicketSelector({ eventId, ticketTypes, rrppId, rrppName 
                 <div className="flex justify-end mt-2">
                   <div className={`w-4 h-4 rounded-full border-2 transition-all ${
                     isSelected
-                      ? 'border-[#E91E8C] bg-[#E91E8C]'
+                      ? 'border-[#FFFFFF] bg-[#FFFFFF]'
                       : 'border-white/30'
                   }`} />
                 </div>
@@ -159,14 +159,14 @@ export default function TicketSelector({ eventId, ticketTypes, rrppId, rrppName 
                 <div className="flex items-center gap-4">
                   <button
                     onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                    className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-[#E91E8C] transition-colors"
+                    className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-[#FFFFFF] transition-colors"
                   >
                     <Minus size={14} />
                   </button>
                   <span className="font-bold text-lg w-6 text-center">{quantity}</span>
                   <button
                     onClick={() => setQuantity(Math.min(10, quantity + 1))}
-                    className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-[#E91E8C] transition-colors"
+                    className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:border-[#FFFFFF] transition-colors"
                   >
                     <Plus size={14} />
                   </button>
@@ -176,7 +176,7 @@ export default function TicketSelector({ eventId, ticketTypes, rrppId, rrppName 
 
             {/* Total */}
             {selectedType.price > 0 && (
-              <div className="flex items-center justify-between p-4 border border-[#E91E8C]/20 rounded-lg bg-[#E91E8C]/5">
+              <div className="flex items-center justify-between p-4 border border-[#FFFFFF]/20 rounded-lg bg-[#FFFFFF]/5">
                 <span className="font-semibold">Total</span>
                 <span className="font-black text-xl gradient-text">
                   ${total.toLocaleString('es-AR')}
@@ -230,7 +230,7 @@ export default function TicketSelector({ eventId, ticketTypes, rrppId, rrppName 
               value={form.name}
               onChange={e => setForm({ ...form, name: e.target.value })}
               placeholder="Tu nombre y apellido"
-              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#E91E8C] transition-colors"
+              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FFFFFF] transition-colors"
             />
           </div>
           <div>
@@ -240,7 +240,7 @@ export default function TicketSelector({ eventId, ticketTypes, rrppId, rrppName 
               value={form.email}
               onChange={e => setForm({ ...form, email: e.target.value })}
               placeholder="tu@email.com"
-              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#E91E8C] transition-colors"
+              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FFFFFF] transition-colors"
             />
           </div>
           <div>
@@ -250,7 +250,7 @@ export default function TicketSelector({ eventId, ticketTypes, rrppId, rrppName 
               value={form.phone}
               onChange={e => setForm({ ...form, phone: e.target.value })}
               placeholder="+54 9 351 XXX XXXX"
-              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#E91E8C] transition-colors"
+              className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#FFFFFF] transition-colors"
             />
           </div>
         </div>
@@ -281,7 +281,7 @@ export default function TicketSelector({ eventId, ticketTypes, rrppId, rrppName 
   // ─── STEP: Loading ───────────────────────────────────────────
   return (
     <div className="flex flex-col items-center justify-center py-24 gap-4">
-      <Loader2 size={32} className="animate-spin text-[#E91E8C]" />
+      <Loader2 size={32} className="animate-spin text-[#FFFFFF]" />
       <p className="text-white/50 text-sm">Procesando tu pedido...</p>
     </div>
   )

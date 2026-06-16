@@ -51,14 +51,14 @@ export default async function EventPage({ params, searchParams }: Props) {
   return (
     <div className="min-h-screen bg-black">
       {/* Hero del evento */}
-      <div className="relative h-[50vh] min-h-[350px] bg-gradient-to-b from-[#1a0025] via-[#0d0010] to-black overflow-hidden">
+      <div className="relative h-[50vh] min-h-[350px] bg-gradient-to-b from-[#161616] via-[#0a0a0a] to-black overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#E91E8C]/15 blur-[100px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[#FFFFFF]/15 blur-[100px]" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-end pb-10 pt-28">
           {rrpp && (
-            <div className="mb-3 inline-flex items-center gap-2 bg-[#E91E8C]/10 border border-[#E91E8C]/30 rounded-full px-4 py-1.5 w-fit">
-              <span className="text-xs text-[#E91E8C] font-semibold uppercase tracking-wider">
+            <div className="mb-3 inline-flex items-center gap-2 bg-[#FFFFFF]/10 border border-[#FFFFFF]/30 rounded-full px-4 py-1.5 w-fit">
+              <span className="text-xs text-[#FFFFFF] font-semibold uppercase tracking-wider">
                 Invitación de {rrpp.name}
               </span>
             </div>
@@ -78,21 +78,21 @@ export default async function EventPage({ params, searchParams }: Props) {
 
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <Calendar size={18} className="text-[#E91E8C] mt-0.5 flex-shrink-0" />
+                <Calendar size={18} className="text-[#FFFFFF] mt-0.5 flex-shrink-0" />
                 <div>
                   <div className="font-semibold capitalize">{dateStr}</div>
                   <div className="text-white/40 text-sm">Fecha del evento</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Clock size={18} className="text-[#E91E8C] mt-0.5 flex-shrink-0" />
+                <Clock size={18} className="text-[#FFFFFF] mt-0.5 flex-shrink-0" />
                 <div>
                   <div className="font-semibold">{timeStr} hs</div>
                   <div className="text-white/40 text-sm">Hora de apertura</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin size={18} className="text-[#E91E8C] mt-0.5 flex-shrink-0" />
+                <MapPin size={18} className="text-[#FFFFFF] mt-0.5 flex-shrink-0" />
                 <div>
                   <div className="font-semibold">{event.venue}</div>
                   <div className="text-white/40 text-sm">Lugar</div>
@@ -107,19 +107,19 @@ export default async function EventPage({ params, searchParams }: Props) {
               </h3>
               <ul className="space-y-2 text-sm text-white/50">
                 <li className="flex items-start gap-2">
-                  <span className="text-[#E91E8C] mt-0.5">•</span>
+                  <span className="text-[#FFFFFF] mt-0.5">•</span>
                   Tu ticket llega por email con un QR único e intransferible.
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#E91E8C] mt-0.5">•</span>
+                  <span className="text-[#FFFFFF] mt-0.5">•</span>
                   Presentá el QR en puerta desde tu celular.
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#E91E8C] mt-0.5">•</span>
+                  <span className="text-[#FFFFFF] mt-0.5">•</span>
                   No hay reintegros salvo cancelación del evento.
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-[#E91E8C] mt-0.5">•</span>
+                  <span className="text-[#FFFFFF] mt-0.5">•</span>
                   Menores de 18 años no pueden ingresar.
                 </li>
               </ul>

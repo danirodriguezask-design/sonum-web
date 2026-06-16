@@ -20,7 +20,7 @@ export default function Footer() {
                 href="https://instagram.com/sonum.arg"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/40 hover:text-[#E91E8C] transition-colors"
+                className="text-white/40 hover:text-white transition-colors"
               >
                 <Instagram size={20} />
               </a>
@@ -28,7 +28,7 @@ export default function Footer() {
                 href="https://open.spotify.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/40 hover:text-[#E91E8C] transition-colors"
+                className="text-white/40 hover:text-white transition-colors"
               >
                 <Music2 size={20} />
               </a>
